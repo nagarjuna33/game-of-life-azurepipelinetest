@@ -1,5 +1,5 @@
 ---
-pool:
+pool: 
 name: "azure-pipeline"
 vmImage: "ubuntu-latest"
 steps:
