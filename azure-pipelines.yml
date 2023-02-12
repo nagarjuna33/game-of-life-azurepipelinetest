@@ -2,4 +2,4 @@
 pool: 
   vmImage: ubuntu-latest
 steps:
-  - script: "yum install nginx"
+  - script: "apt install nginx"
