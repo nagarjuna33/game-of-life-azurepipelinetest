@@ -1,6 +1,6 @@
 ---
 pool: 
-name: "azure-pipeline"
-  vmImage: "ubuntu-latest"
+  name: "azure-pipeline"
+  vmImage: ubuntu-latest
 steps:
   - script: "yum install nginx"
