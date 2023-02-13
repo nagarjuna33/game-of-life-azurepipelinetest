@@ -2,7 +2,7 @@
 pool: default
 name: gameoflife
 trigger:
-  - main
+  - master
 stages:
   - stage: stage1
     displayName: gol-stage1
