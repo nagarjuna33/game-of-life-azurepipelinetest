@@ -1,5 +1,19 @@
 ---
-pool: 
-  vmImage: ubuntu-latest
-steps:
-- script: "apt update && apt install nginx"
+pool: default
+name: gameoflife
+trigger:
+  - main
+stages:
+  - stage: stage1
+    displayName: gol-stage1
+    jobs:
+      - job: job1
+        displayName: gol-job1
+        steps:
+          - task: Maven@3
+            inputs:
+              mavenPOMFile: 'pom.xml'
+              goals: 'package'
+              publishJUnitResults: true
+              testResultsFiles: '**/surefire-reports/TEST-*.xml'
+              jdkDirectory: '/usr/lib/jvm/java-11-openjdk-amd64'
