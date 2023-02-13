@@ -1,7 +1,5 @@
 ---
-pool:
-  vmImage: ubuntu-22.04
-name: gameoflife
+pool: default
 trigger:
   - master
 stages:
@@ -17,5 +15,4 @@ stages:
               goals: 'package'
               publishJUnitResults: true
               testResultsFiles: '**/surefire-reports/TEST-*.xml'
-              javaHomeOption: 'JDKVersion' 
-              jdkVersionOption: '1.8'
+              jdkDirectory: '/usr/lib/jvm/java-8-openjdk-amd64'
